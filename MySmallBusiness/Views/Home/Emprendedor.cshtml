@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Emprendedor";
+}
+
+<img src="~/Content/Images/banner.png" style="width: 600px; height: 170px; padding: 7px; margin-left: 24%;"/>
+    
+<br />
+<br />
+
+<form action="@Url.Action("RecibirContacto", "Home")" method="post" style="background-color:darkgray; color:white;" >
+    <br />
+    <h2 style="color:white; text-align:center">Registra tu emprendimiento.</h2>
+
+    <ul>
+        <li style="margin-left:15px; font-size: large;"> Nombre de Emprendimiento:</li>
+        <br>
+        <input type="text" name="nombre" style="margin-left:15px; height:30px; width:300px;">
+        <br>
+        <br>
+        <li style="margin-left:15px; font-size: large;"> Fecha de Creación: </li>
+            <br>
+            <input type="date" name="fecha" style="margin-left:15px; height:30px; width:300px;">
+            <br>
+            <br>
+            <li style="margin-left:15px; font-size: large;"> Elige una categoria:</li>
+            <br>
+            <input type="radio" name="Categoría" value="Comida" style="margin-left:15px;"> Gastronomía
+            <br>
+            <input type="radio" name="Categoría" value="Bebida" style="margin-left:15px;"> Bebidas
+            <br>
+            <input type="radio" name="Categoría" value="Música" style="margin-left:15px;"> Música
+            <br>
+            <input type="radio" name="Categoría" value="Manualidades" style="margin-left:15px;"> Manualidades
+            <br>
+            <input type="radio" name="Categoría" value="Vestimenta" style="margin-left:15px;"> Vestimenta
+            <br>
+            <input type="radio" name="Categoría" value="Bisuteria" style="margin-left:15px;"> Salud/Belleza
+            <br>
+            <input type="radio" name="Categoría" value="Bisuteria" style="margin-left:15px;"> Bisuteria/Joyeria
+            <br>
+            <input type="radio" name="Categoría" value="Educación" style="margin-left:15px;"> Eduación
+            <br>
+            <input type="radio" name="Categoría" value="Otro" style="margin-left:15px;"> Otro
+            <br>
+            <br>
+            <li style="margin-left:15px; font-size: large;"> ¿A qué nos dedicamos? </li>
+            <br>
+            <input type="text" name="razón" style="margin-left:15px; height:30px; width:300px;">
+
+            <br>
+            <br>
+            <input type="submit" value="Enviar" style="margin-right: 40px; margin-left: 24px; margin-bottom: 40px;"/>
+            <input type="submit" value="Borrar" />
+
+</ul>
+</form>
+

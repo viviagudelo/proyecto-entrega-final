@@ -1,0 +1,58 @@
+﻿@model MySmallBusiness.Models.Entrepreneurship
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<img src="~/Content/Images/banner.png" style="width: 600px; height: 170px; padding: 7px; margin-left: 24%; background-color: black;" />
+<br />
+<br />
+<br />
+<div>
+    
+
+    <dl class="form-horizontal">
+        <h2 style="background-color: darkgrey; text-align: center;"> Detalles de su registro </h2>
+        <hr />
+
+        <dt  style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd  style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt  style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt  style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd style="padding-left:50px; padding-bottom: 13px;">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<div class="btn" style="font-size:larger; ">
+
+    <a href="@Url.Action("Index", "Home")" style="padding:20px;">Inicio</a>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) 
+    @Html.ActionLink("Back to List", "Index")
+</div>
+

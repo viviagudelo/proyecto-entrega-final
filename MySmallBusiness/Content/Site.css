@@ -1,24 +1,105 @@
-﻿body {
+﻿
+body {
     padding-top: 50px;
     padding-bottom: 20px;
-}
+    background-image: url("images/final2.png") ;
+  }
 
-/* Set padding to keep content from hitting the edges */
+/* padding para evitar que choque las esquinas*/
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
+
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
 }
+
+.titulo
+{
+    color:brown;
+    text-align:center;
+}
+
+.iconContenedor {
+    background-color:#efefef;
+    height:59px;
+    width:55px;
+    border-radius:34%;
+    text-align:center;
+    padding: 2%;
+    margin: auto;
+}
+
+.iconItem {
+    color:#52d3aa;
+    font-size: 3em;
+}
+
+.cuadro {
+    background-color:darkgray;
+    padding:2%;
+    border-radius: 3%;
+    margin-left: 7%;
+    margin-bottom: 2%;
+}
+
+.cuadro2 {
+    text-align:center;
+    padding:2%;
+    background-color:azure;
+    border-radius: 8%;
+    margin-left: 7%;
+    margin-bottom: 2%;
+    height: 78px;
+    width: 185px;
+}
+
+#gtco-features {
+        margin-top: 8%;
+}
+
+.parrafo {
+    text-align: justify;
+    color:white;
+    font-size:large;
+}
+
+.fondo {
+    background-color: cadetblue;
+}
+
+.pregunta{
+    font-size: large;
+}
+
+.footer{
+    text-align: center;
+}
+
+.h1{
+    background-image: url("imagenes/banner.png");
+}
+
+.btn{
+    background-color: mediumaquamarine;
+    border-radius: 50%;
+    }
+
+.table{
+    background-color:darkgray;
+    }
+
+.form-horizontal{
+    background-color:darkgray;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+

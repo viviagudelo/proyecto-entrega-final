@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MySmallBusiness.Models.Entrepreneurship>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<img src="~/Content/Images/banner.png" style="width: 600px; height: 170px; padding: 7px; margin-left: 24%; background-color: black;"/>
+<br />
+<br />
+<h2>
+    <p style="text-align: center; background: darkgrey;">
+        @Html.ActionLink("Nuevo", "Create")
+    </p> </h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<a href="@Url.Action("Index", "Home")" class="btn" style="padding:20px; font-size:larger;">Inicio</a>

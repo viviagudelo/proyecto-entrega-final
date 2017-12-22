@@ -12,18 +12,22 @@ namespace MySmallBusiness.Controllers
         {
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult Emprendedor()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
+        public ActionResult Cliente()
+        {
+            return View();
+        }
+        [HttpPost]
 
+        public ActionResult RecibirContacto()
+        {
+            return View("Gracias");
+        }
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }

@@ -1,0 +1,65 @@
+﻿@model MySmallBusiness.Models.Entrepreneurship
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<img src="~/Content/Images/banner.png" style="width: 600px; height: 170px; padding: 7px; margin-left: 24%; background-color: black;" />
+<br />
+<br />
+<br />
+
+
+
+    <dl class="form-horizontal">
+        <h2 style="background-color: darkgrey; text-align: center;"> ¿Desea eliminar su registro? </h2>
+        <hr/>
+        
+        <dt style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+
+        <dt style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+
+        <dd style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+
+        <dt style="padding-left:50px; padding-bottom: 3px;">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd style="padding-left:50px; padding-bottom: 13px;">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+
+    </dl>
+<div class="btn" style="font-size:larger;">
+
+                  
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <a href="@Url.Action("Index", "Home")" style="padding:20px; padding-right: 1px;">Inicio</a>
+        <input type="submit" value="Delete" class="btn" />
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+}
+</div>
